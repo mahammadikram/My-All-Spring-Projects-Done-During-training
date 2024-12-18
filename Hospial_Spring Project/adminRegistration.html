@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Admin Registration</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS for border height and width */
+    .bordered-form {
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-success bg-warning mb-5 ">
+        <div class="container">
+            <img src="\photos\hospital logo.jpg" height="50px" class="rounded mr-3" alt="">
+            <a class="navbar-brand " href="#">Hospital Management</a>
+            <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Check Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Check Docotrs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">All Patients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Assign Appointments</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container mb-5">
+  <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="col-lg-6">
+      <div class="bordered-form bg-secondary">
+        <h2 class="text-center bg-warning">Hospital Admin Registration</h2>
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Mobile Number:</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <select class="custom-select" id="countryCode" name="countryCode" required>
+                  <option value="">Select Country Code</option>
+                  <option value="+1">+1 (US)</option>
+                  <option value="+91">+91 (India)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+61">+61 (Australia)</option>
+                  <option value="+86">+86 (China)</option>
+                  <option value="+33">+33 (France)</option>
+                  <option value="+49">+49 (Germany)</option>
+                  <option value="+81">+81 (Japan)</option>
+                  <option value="+7">+7 (Russia)</option>
+                  <option value="+971">+971 (United Arab Emirates)</option>
+                  <!-- Add more country codes as needed -->
+                </select>
+              </div>
+              <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter mobile number" required>
+              <div class="invalid-feedback">Please enter a valid digit mobile number.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender" required>
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="booldgroup">Blood Group</label>
+            <select class="form-control" id="blood" required>
+              <option value="">Select Boold Group</option>
+              <option value="A-positive">A+</option>
+              <option value="B-positive">B+</option>
+              <option value="AB-positive">AB+</option>
+              <option value="A-negative">A-</option>
+              <option value="B-negative">B-</option>
+              <option value="AB-negative">AB-</option>
+              <option value="O-positive">O+</option>
+              <option value="O-positive">O-</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Custom validation for mobile number based on country code
+  $('#registrationForm').submit(function(event) {
+    var countryCode = $('#countryCode').val();
+    var phoneNumber = $('#phoneNumber').val();
+    var isValid = true;
+
+    // Check if country code is selected
+    if (countryCode === '') {
+      $('#countryCode').addClass('is-invalid');
+      isValid = false;
+    } else {
+      $('#countryCode').removeClass('is-invalid');
+    }
+
+    // Check if mobile number matches expected format based on country code
+    if (countryCode === '+1' && !(/^\d{10}$/.test(phoneNumber))) { // For US
+      $('#phoneNumber').addClass('is-invalid');
+      isValid = false;
+    } else if (countryCode === '+91' && !(/^\d{10}$/.test(phoneNumber))) { // For India
+      $('#phoneNumber').addClass('is-invalid');
+      isValid = false;
+    } else if (countryCode === '+44' && !(/^\d{11}$/.test(phoneNumber))) { // For UK
+      $('#phoneNumber').addClass('is-invalid');
+      isValid = false;
+    } else if (countryCode === '+61' && !(/^\d{10}$/.test(phoneNumber))) { // For Australia
+      $('#phoneNumber').addClass('is-invalid');
+      isValid = false;
+    } else if (countryCode === '+86' && !(/^\d{11}$/.test(phoneNumber))) { // For China
+      $('#phoneNumber').addClass('is-invalid');
+      isValid = false;
+    } else if (countryCode === '+33' && !(/^\d{10}$/.test(phoneNumber))) { // For France
+      $('#phoneNumber').addClass('is-invalid');
+      isValid = false;
+    } else if (countryCode === '+49' && !(/^\d{10}$/.test(phoneNumber))) { // For Germany
+      $('#phoneNumber').addClass('is-invalid');
+      isValid = false;
+    } else if (countryCode === '+81' && !(/^\d{11}$/.test(phoneNumber))) { // For Japan
+      $('#phoneNumber').addClass('is-invalid');
+      isValid = false;
+    } else if (countryCode === '+7' && !(/^\d{10}$/.test(phoneNumber))) { // For Russia
+      $('#phoneNumber').addClass('is-invalid');
+      isValid = false;
+    } else if (countryCode === '+971' && !(/^\d{10}$/.test(phoneNumber))) { // For UAE
+      $('#phoneNumber').addClass('is-invalid');
+      isValid = false;
+    }
+    // Add more conditions for other country codes as needed
+
+    if (!isValid) {
+      event.preventDefault(); // Prevent form submission if validation fails
+    }
+  });
+</script>
+
+</body>
+</html>

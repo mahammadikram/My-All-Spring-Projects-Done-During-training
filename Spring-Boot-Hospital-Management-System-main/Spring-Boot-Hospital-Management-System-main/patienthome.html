@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatibale" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.8">
+        <link rel="stylesheet" href="/css/patienthome.css">
+        <title>Patient Home</title>
+    </head>
+<body>
+    <div class="head">
+        <img id="img" src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px"> 
+        <h2>VSP HOSPITAL</h2>     
+     </div>
+    <div class="menu-bar">
+        <ul>
+            <li><a th:href="@{/patienthome}">Patient Home</a></li>
+            <li><a th:href="@{/patientappointment}">Appointment</a></li>              
+            <li><a th:href="@{/pathologyTest}">Test Appointment</a></li> 
+        </ul>
+    </div>
+    <footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>
+</html>

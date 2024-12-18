@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatibale" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.8">
+        <link rel="stylesheet" href="/css/viewdoctor.css">
+        <title>Doctor View</title>
+    </head>
+    <body>
+	   <div class="head"> <img src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px">
+        <h2>VSP Hospital</h2>   
+      </div>
+         <form>
+            <table>
+            <tr><h1><center><u>DOCTOR'S LIST</u></center></h1></tr>	
+            <tr class="row">
+                <th height=30px>ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Gender</th>
+               <!--  <th>Password</th> -->
+                <th>Action</th>
+            </tr>
+            <tr th:each="DoctorAdd:${listdoc}" bgcolor="skyblue">
+                <td th:text="${DoctorAdd.id}"><input type="text" name="id" required></td>
+                <td th:text="${DoctorAdd.name}"><input type="text" name="name" required></td>
+                <td th:text="${DoctorAdd.designation}"><input type="text" name="designation" required></td>
+                <td th:text="${DoctorAdd.phone}"><input type="phone" name="phone" size="10" required></td>
+                <td th:text="${DoctorAdd.email}"><input type="email" name="email" required></td>
+                <td th:text="${DoctorAdd.gender}"><input type="radio" name="gender">Male<input type="radio" name="gender">Female</td>
+               <!--  <td th:text="${DoctorAdd.password}"><input type="password" name="password" required></td> -->
+                <td colspan="2"><button class="b" type="submit"><a th:href="@{'/deletedoctor/'+ ${DoctorAdd.id}}">DELETE</a></button>
+                <button class="c" type="submit"><a th:href="@{'/editdoctor/'+ ${DoctorAdd.id}}">UPDATE</a></button></td>
+                
+            </tr>
+        </table>
+        </form> 
+        <footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Event Management System </title>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/fontawsom-all.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/animate.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/style.css}" />
+    <script th:src="@{/assets/js/jquery-3.2.1.min.js}"></script>
+    <!--        <script src="assets/js/popper.min.js"></script>-->
+    <script th:src="@{/assets/js/bootstrap.min.js}"></script>
+    <script th:src="@{/assets/plugins/scroll-nav/js/scrolling-nav.js}"></script>
+    <script th:src="@{/assets/js/script.js}"></script>
+</head>
+
+<body>
+
+    <!-- ################# Header Starts Here#######################-->
+
+    <header id="menu-jk">
+
+        <div id="nav-head" class="header-nav" style="position: fixed;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3  col-sm-12"
+                        style="color:#000;font-weight:bold; font-size:40px; margin-top: 1% !important;">Happy
+                        <!-- روح صغيرة   -->
+                        <a data-toggle="collapse" data-target="#menu" href="#menu"><i
+                                class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                    </div>
+                    <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                        <ul>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href="#home" onMouseOver="this.style.color = '#00ab9f'"
+                                    onMouseOut="this.style.color = 'black'">Home</a></li>
+                            <li><a href="#about_us" onMouseOver="this.style.color = '#00ab9f'"
+                                    onMouseOut="this.style.color = 'black'">About Us</a></li>
+                            <li><a href="#gallery" onMouseOver="this.style.color = '#00ab9f'"
+                                    onMouseOut="this.style.color = 'black'">Gallery</a></li>
+                            <!-- <li><a href="Test.jsp"onMouseOver="this.style.color='#00ab9f'"
+           onMouseOut="this.style.color='black'">Careers</a></li>  -->
+                            <li><a href="#contact_us" onMouseOver="this.style.color = '#00ab9f'"
+                                    onMouseOut="this.style.color = 'black'">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 d-none d-lg-block appoint">
+                        <a class="btn btn-success" href="#logins">Signup / Login</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ################# Slider Starts Here#######################-->
+    <section id="home">
+        <div class="slider-detail" style="padding-top: 70px;">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                </ol>
+
+
+
+
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img class="d-block w-100" th:src="@{/assets/images/slider/wedding.jpeg}" alt="first"
+                            style="height: 600px; width:50%; ">
+
+                        <div class="carousel-caption vdg-cur d-none d-md-block">
+                            <h5 class="animated bounceInDown">The thing made in <br>heaven <h2 style="color:black">
+                                    Marriage</h2>
+                            </h5>
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" th:src="@{/assets/images/slider/Garba.jpeg}" alt="first"
+                            style="height: 600px; width:50%; ">
+
+                        <div class="carousel-caption vdg-cur d-none d-md-block">
+                            <h5 class="animated bounceInDown">The traditional event <h2>Garba</h2>
+                            </h5>
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" th:src="@{/assets/images/Birthday.jpg}" alt="second"
+                            style="height: 600px; ">
+
+                        <div class="carousel-caption vdg-cur d-none d-md-block">
+                            <h5 class="animated bounceInDown">Celebrate the life - <h2>Birthday </h2>
+                            </h5>
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+    <!--  ************************* Logins ************************** -->
+
+
+    <section id="logins" class="our-blog container-fluid">
+        <div class="container">
+            <div class="inner-title">
+
+                <h2>Login / SignUp</h2>
+            </div>
+            <div class="col-sm-12 blog-cont">
+                <div class="row no-margin">
+
+                    <div class="col-sm-4 blog-smk">
+                        <div class="blog-single">
+
+                            <img th:src="@{/login.jpeg}" alt="">
+
+                            <div class="blog-single-det">
+                                <h6>Login</h6>
+                                <a href="loginpage">
+                                    <button class="btn btn-success btn-sm">Click Here</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 blog-smk">
+                        <!--  additional -->
+                    </div>
+                    <div class="col-sm-4 blog-smk">
+                        <div class="blog-single">
+
+                            <img th:src="@{/signup.jpeg}" alt="">
+
+                            <div class="blog-single-det">
+                                <h6>SignUp</h6>
+
+                                <a href="signuppage"> <!-- target="_blank" -->
+                                    <button class="btn btn-success btn-sm">Click Here</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IF WE WANT TO ADD MORE HERE  -->
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- ************************* About Us Starts Here ************************** -->
+
+    <section id="about_us" class="about-us">
+        <div class="row no-margin">
+            <div class="col-sm-6 image-bg no-padding">
+
+            </div>
+            <div class="col-sm-6 abut-yoiu">
+                <h3>About Our Happy
+                    Event Management</h3>
+                We are Corporate Event Planners and one of the Best Event Management Company in Bangalore with our
+                services available PAN India. Our forte lies in delivering cutting edge, innovative and professional
+                event management services. We are a bunch of fun loving, energetic and passionate people working towards
+                the common goal of providing exceptional services. From inspirational ideas to stunning productions,
+                strong themes and creative programs, we do everything to create memorable experiences and branding
+                opportunities that exceed customer expectations.
+
+                We take pride in presenting ourselves as one of the best in the industry. We offer a wide range of event
+                management services. Be it a Virtual conference, Award ceremony, Product launch, Family event or Sports
+                event, we have you covered.
+
+                <h3>The Team</h3>
+
+                The Event Planner team is made up of a mix of people. Manoj and Abhishek take care of corporate events.
+                Suhana is the wedding guru. Prabhu is the creative one. Sir Karthik is the merchandise expert. In
+                addition to this group of people, a large support team helps out in everything the company does, in
+                office work to on-site logistics planning. One thing we can truly say about our team is that we are very
+                passionate about our job!
+            </div>
+        </div>
+    </section>
+
+
+    <!--  ************************* Gallery Starts Here ************************** -->
+    <div id="gallery" class="gallery">
+        <div class="container">
+            <div class="inner-title">
+
+                <h2>Our Gallery</h2>
+            </div>
+            <div class="row">
+
+
+                <div class="gallery-filter d-none d-sm-block">
+                    <button class="btn btn-default filter-button" data-filter="all">All</button>
+                    <button class="btn btn-default filter-button" data-filter="marriage">Wedding</button>
+                    <button class="btn btn-default filter-button" data-filter="birthday">Bithday</button>
+                    <button class="btn btn-default filter-button" data-filter="corporate">Corporate functions</button>
+                    <button class="btn btn-default filter-button" data-filter="concert">Concerts</button>
+                </div>
+                <br />
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter birthday">
+                    <img th:src="@{/gallery/Birthday.jpg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter marriage">
+                    <img th:src="@{/gallery/wedding.jpeg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter concert">
+                    <img th:src="@{/gallery/concert.jpg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter corporate">
+                    <img th:src="@{/gallery/corporate.jpg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter birthday">
+                    <img th:src="@{/gallery/Birthday2.jpg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter marriage">
+                    <img th:src="@{/gallery/wedding2.jpg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter concert">
+                    <img th:src="@{/gallery/concert2.jpg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter corporate">
+                    <img th:src="@{/gallery/corporate2.jpg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter birthday">
+                    <img th:src="@{/gallery/Birthday3.jpeg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter marriage">
+                    <img th:src="@{/gallery/wedding3.jpeg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter concert">
+                    <img th:src="@{/gallery/concert3.jpg}" class="img-responsive">
+                </div>
+
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter corporate">
+                    <img th:src="@{/gallery/corporate3.jpg}" class="img-responsive">
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- ######## Gallery End ####### -->
+
+
+    <!--  ************************* Contact Us Starts Here ************************** -->
+
+    <section id="contact_us" class="contact-us-single">
+        <div class="row no-margin">
+
+            <div class="col-sm-12 cop-ck">
+                <!--                    <form method="post" action="mailto:shakthisravanth001@gmail.com">-->
+                <form method="post" action="Messagedata">
+                    <h2>Contact Form</h2>
+                    <div class="row cf-ro">
+
+                        <div class="col-sm-3"><label>Enter Name :</label></div>
+                        <div class="col-sm-8"><input type="text" placeholder="Enter Name" name="fullname"
+                                class="form-control input-sm" required></div>
+                    </div>
+                    <div class="row cf-ro">
+                        <div class="col-sm-3"><label>Mobile Number:</label></div>
+                        <div class="col-sm-8"><input type="text" name="mobileno" placeholder="Enter Mobile Number"
+                                class="form-control input-sm" required></div>
+                    </div>
+                    <div class="row cf-ro">
+                        <div class="col-sm-3"><label>Email Address :</label></div>
+                        <div class="col-sm-8"><input type="text" name="emailid" placeholder="Enter Email Address"
+                                class="form-control input-sm" required></div>
+                    </div>
+
+                    <div class="row cf-ro">
+                        <div class="col-sm-3"><label>Enter Message:</label></div>
+                        <div class="col-sm-8">
+                            <textarea rows="5" placeholder="Enter Your Message" class="form-control input-sm"
+                                name="description" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row cf-ro">
+                        <div class="col-sm-3"><label></label></div>
+                        <div class="col-sm-8">
+                            <button class="btn btn-success btn-sm" type="submit" name="mess">Send Message</button>
+                        </div>
+                    </div> <br>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- ################# Footer Starts Here#######################-->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        9999999999 <br>
+                        Pentagon Space, Vijaynagar, Banglore, 560040.
+
+                    </address>
+
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <h2>Team: </h2>
+                    <ul class="list-unstyled link-list">
+                        <li><a href="">Sir &#160;KARTHIK &#160;(Mentor) </a></li>
+                        <li><a href="">MANOJ &#160;H &#160;S &#160;(Database)</a></li>
+                        <li><a href="#services">SUHANA &#160; A &#160;(Frontend)</a></li>
+                        <li><a href="#logins">J &#160;SHAKTHI &#160;SRAVANTH&#160; (Backend) </a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <div class="copy">
+        <div class="container">
+            <center>Happy
+                Event Management System </center>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+
+
+</html>

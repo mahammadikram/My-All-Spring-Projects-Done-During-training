@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Appointment Book</title>
+<link rel="stylesheet" type="text/css"
+	href="/css/patientappointment.css">
+</head>
+<script>
+        function myFunction1() {
+          alert("Booking Appointment Successful....");
+        }
+</script>
+<body>
+	<div class="head">
+		<img id="img" src="/image/HospitalLogo.png" alt="logo.jpg"
+			height="75px" width="75px">
+		<h2>VSP HOSPITAL</h2>
+	</div>
+	<div id="container">
+		<!--This is a division tag for body container-->
+		<div id="body_header">
+			<!--This is a division tag for body header-->
+			<h1>Appointment Booking page</h1>
+			<p>Make your appointments more easier</p>
+
+		</div>
+		<form th:action="@{/patienthome}" th:object="${patientappointment}" method="post">
+			<fieldset>
+				<legend><span class="number">1</span>Your basic details</legend>
+				
+				<label for="name">Name:</label> 
+				<input type="text" id="name" th:field="*{name}" value="id" placeholder="Enter full name" required> 
+				
+				<label for="tel">Contact Number:</label> 
+				<input type="tel" id="tel" th:field="*{contact}" value="contact" placeholder="Enter mobile number" required>
+				
+				<label for="age">Age:</label>
+				<input type="tel" id="age" th:field="*{age}" value="age" placeholder="Enter age" required>
+				 
+				 <label for="gender">Gender:</label>
+				 <select id="appointment_for" th:field="*{gender}" value="gender" required>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="other">Other</option>
+				 </select>
+			</fieldset>
+
+			<fieldset>
+				<legend><span class="number">2</span>Appointment Details</legend>
+				<label for="appointment_for">Appointment for:</label> <select
+					id="appointment_for" th:field="*{appointment}" required>
+					<option value="cardiologist">Dr. A.G. Agarwal--Cardiologist</option>
+					<option value="dentist">Dr. P.R. Waghmode --Dentist</option>
+					<option value="audiologist">Dr. K.S. Shah --Audiologist</option>
+					<option value="ent_specialist">Dr. D.K. Shukla ENT Specialist</option>
+					<option value="gynacologist">Dr. S.k. Rawat --Gynacologist</option>
+					<option value="orthopaedic">Dr. N.O. More --Orthopaedic</option>
+					<option value="vaterinarian">Dr. P.P. Gupta --Vaterinarian</option>
+					<option value="neurologist">Dr. N.K. Pandit --Neurologist</option>
+					<option value="oncologist">Dr. S.U. Ayyar --Oncologist</option>
+					<option value="cardiothoracic_surgeon">Dr. V.J. John --Cardiothoracic surgeon</option>
+				</select> 
+				
+				<label for="appointment_description">Appointment Description:</label>
+				<textarea id="appointment_description" th:field="*{description}"placeholder="" required></textarea>
+				
+				<label for="date">Date:</label>
+				<input type="date" th:field="*{date}" value="date" required></input><br>
+				 
+				<label for="time">Time:</label>
+				 <select th:field="*{time}" required>
+					<option value="morning(9 am To 1 pm)">Morning(9 am To 1 pm)</option>
+					<option value="afternoon(2 pm To 5 pm)">Afternoon(2 pm To 5 pm)</option>
+					<option value="evening(6 am To 10 pm)">Evening(6 am To 10 pm)</option>
+				</select>
+				 <br>
+			</fieldset>
+			<button type="submit" onclick="myFunction1()">Book Appointment</button>
+		</form>
+	</div>
+	<footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>
+
+</html>

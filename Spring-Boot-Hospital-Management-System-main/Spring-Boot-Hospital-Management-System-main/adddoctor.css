@@ -1,0 +1,67 @@
+body{  
+    font-family: Calibri, Helvetica, sans-serif;  
+    background-color: lightblue;  
+  }  
+  .container {  
+      padding: 50px;  
+    background-color: lightblue;  
+  }  
+    
+ .head{
+     display: flex;
+    margin-left: 550px;  
+ }
+
+ .head h2{
+     margin-top: 25px;
+ }
+  input[type=text], input[type=password], textarea {  
+    width: 100%;  
+    padding: 15px;  
+    margin: 5px 0 22px 0;  
+    display: inline-block;  
+    border: none;  
+    background: #f1f1f1;  
+  }  
+  input[type=text]:focus, input[type=password]:focus {  
+    background-color: wheat;  
+    outline: none;  
+  }  
+  div {  
+      padding: 10px 0;  
+  }  
+  hr {  
+    border: 1px solid #f1f1f1;  
+    margin-bottom: 25px;  
+  }  
+  .deletebtn {  
+    background-color: rgba(248, 99, 94, 0.8);    
+    padding: 10px 16px;  
+    margin: 8px 0;  
+    border: none;  
+    cursor: pointer;  
+    width: 10%;  
+    opacity: 0.9;  
+  }  
+  .deletebtn:hover {  
+    opacity: 1;  
+  } 
+  .cancelbtn {  
+    background-color: rgba(96, 181, 226, 0.8);   
+    padding: 10px 16px;  
+    margin: 8px 0;  
+    border: none;  
+    cursor: pointer;  
+    width: 10%;  
+    opacity: 0.9;  
+  }  
+  .cancelbtn:hover {  
+    opacity: 1;  
+  }
+  footer {
+    margin-top:-15px;
+    text-align: center;
+    padding: -2px;
+    background-color: DarkSalmon;
+    color: white;
+  }

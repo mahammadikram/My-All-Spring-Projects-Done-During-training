@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Appointment Book</title>
+<link rel="stylesheet" type="text/css" href="/css/patologyTest.css">
+</head>
+<script>
+        function myFunction2() {
+          alert("Booking Test  Appointment Successful....");
+        }
+</script>
+<body>
+	<div class="head">
+			<img id="img" src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px">
+			<h2>VSP HOSPITAL</h2>
+		</div>
+		<div id="container">
+			<!--This is a division tag for body container-->
+			<div id="body_header">
+				
+				<h1>Appointment Test Booking page</h1>
+				
+			</div>
+			<form th:action="@{/test}" th:object="${testappointment}" method="post">
+				<fieldset>
+					<legend>
+						<span class="number">1</span>Your basic details
+					</legend>
+
+					<label for="name">Name:</label> 
+					<input type="text" id="name" th:field="*{name}" value="id" placeholder="Enter full name"required>
+					
+					<label for="tel">Contact Number:</label>
+					<input type="tel" id="tel" th:field="*{contact}" value="contact" placeholder="Enter mobile number" required>
+					   
+					<label for="age">Age:</label> 
+					<input type="tel" id="age" th:field="*{age}" value="age" placeholder="Enter age" required>
+
+					<label for="gender">Gender:</label> 
+					<select id="appointment_for" th:field="*{gender}" value="gender" required>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+						<option value="other">Other</option>
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<legend>Appointment Details</legend>
+					<label for="appointment_for">Appointment for:</label> 
+					<select id="appointment_for" th:field="*{appointment}" required>
+						<option value="blood_test">Blood test</option>
+						<option value="liver_function_test">Liver function test</option>
+						<option value="urine_test">Urine test</option>
+						<option value="blood_sugar_test">Blood sugar test</option>
+						<option value="thyroid_function">Thyroid function</option>
+						<option value="dengue_serology">Dengue serology</option>
+						<option value="lipid_profile">Lipid profile</option>
+						<option value="hiv">HIV</option>
+						<option value="kidney_function_test">Kidney function test</option>
+
+					</select>
+
+					<label for="time">Time:</label> 
+					<select th:field="*{time}" required>
+						<option value="Morning slot(9 AM To 9.30 AM)">Morning slot(9 AM To 9.30 AM)</option>
+						<option value="Morning slot(9.30 AM To 10 AM)">Morning slot(9.30 AM To 10 AM)</option>
+						<option value="Morning slot(10 AM To 10.30 AM)">Morning slot(10 AM To 10.30 AM)</option>
+						<option value="Morning slot(10.30 AM To 11 AM)">Morning slot(10.30 AM To 11 AM)</option>
+						<option value="Morning slot(11 AM To 11.30 AM)">Morning slot(11 AM To 11.30 AM)</option>
+						<option value="Morning Slot(11.30 AM To 12 PM)">Slot(11.30 AM To 12 PM)</option>
+						<option value="Afternoon slot(12 PM To 12.30 PM)">Afternoon slot(12 PM To 12.30 PM)</option>
+						<option value="Afternoon slot(12.30 PM To 1 PM)">Afternoon slot(12.30 PM To 1 PM)</option>
+						<option value="Afternoon slot(1 PM To 1.30 PM)">Afternoon slot(1 PM To 1.30 PM)</option>
+						<option value="Afternoon slot(1.30 PM To 2 PM)">Afternoon slot(1.30 PM To 2 PM)</option>
+						<option value="Afternoon slot(2 PM To 2.30 PM)">Afternoon slot(2 PM To 2.30 PM)</option>
+						<option value="Afternoon slot(2.30 PM To 3 PM)">Afternoon slot(2.30 PM To 3 PM)</option>
+						<option value="Afternoon slot(3 PM To 3.30 PM)">Afternoon slot(3 PM To 3.30 PM)</option>
+						<option value="Afternoon slot(3.30 PM To 4 PM)">Afternoon slot(3.30 PM To 4 PM)</option>
+						<option value="Afternoon slot(4 PM To 4.30 PM)">Afternoon slot(4 PM To 4.30 PM)</option>
+						<option value="Afternoon slot(4.30 PM To 5 PM)">Afternoon slot(4.30 PM To 5 PM)</option>
+						<option value="Afternoon slot(5 PM To 5.30 PM)">Afternoon slot(5 PM To 5.30 PM)</option>
+						<option value="Afternoon slot(5.30 PM To 6 PM)">Afternoon slot(5.30 PM To 6 PM)</option>
+						<option value="Evening slot(6 PM To 6.30 PM)">Evening slot(6 PM To 6.30 PM)</option>
+						<option value="Evening slot(6.30 PM To 7 PM)">Evening slot(6.30 PM To 7 PM)</option>
+						<option value="Evening slot(7 PM To 7.30 PM)">Evening slot(7 PM To 7.30 PM)</option>
+						<option value="Evening slot(7.30 PM To 8 PM)">Evening slot(7.30 PM To 8 PM)</option>
+						<option value="Evening slot(8 PM To 8.30 PM)">Evening slot(8 PM To 8.30 PM)</option>
+						<option value="Evening slot(8.30 PM To 9 PM)">Evening slot(8.30 PM To 9 PM)</option>
+					</select> <br>
+				</fieldset>
+				<button type="submit" onclick="myFunction2()">Book Test  Appointment</button>
+			</form>
+
+			<footer>
+				<p>&copy; Copyright</p>
+			</footer>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body{  
+    font-family: Calibri, Helvetica, sans-serif;  
+    background-color: lightblue;  
+  }      
+ .head{
+     display: flex;
+    margin-left: 550px;  
+ }
+ .head h2{
+    margin-top: 25px;
+}
+table, tr, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+button{
+  width: 100%;
+  margin-bottom: 5px;
+  border: none;
+  outline: none;
+  height: 25px;
+  background: #1c8adb;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;    
+}

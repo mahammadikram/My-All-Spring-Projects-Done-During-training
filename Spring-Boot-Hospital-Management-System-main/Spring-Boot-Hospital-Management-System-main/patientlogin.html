@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/css/patientlogin.css">
+    <title> Patient login </title>
+</head>
+<body>
+    <div class="head">
+        <img id="img" src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px"> 
+        <h2>VSP HOSPITAL</h2>     
+     </div>
+  
+      <div class="login-page">      
+            <h1> PATIENT LOGIN</h1>          
+            <form th:action="@{/patienthome}" >
+                <p>Username</p>
+                <input type="text" placeholder="Enter Username" required/>
+                <p>Password</p>
+                <input type="password" placeholder="Enter Password" required/>
+                <button type="submit">Login</button>
+                
+                <p class="message">Not registered? <a th:href="@{/patientregistration}">Register here</a></p> 
+            </form>
+            
+        </div>
+   <footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header id="menu-jk">
+
+        <div id="nav-head" class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3  col-sm-12"
+                        style="color:#000;font-weight:bold; font-size:42px; margin-top: 1% !important;">Happy</div>
+                    <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                        <ul>
+                            <li>
+                                <h2> Only
+                                    <!-- <img src="slogo.jpg" alt="User Image" style="width: 20px; height: 20px; margin-right: 5px;"> -->
+                                    <span style="color: #00ab9f;">&#160;[[${uname}]] &#160;</span>can access and Update this..
+                                </h2>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="col-sm-2 d-none d-lg-block appoint">
+
+                        <a class="btn btn-success" href="/EventManagement/logout">Logout</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <section class="options">
+        
+        <a href="users" class="book-button">Users</a>
+        <a href="allBookings" class="book-button">Bookings</a>
+        
+    </section>
+
+
+
+    <style>
+        .options {
+
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .book-button {
+            display: block;
+            width: 100px;
+            padding: 7px;
+            background-color: #00ab9f;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .book-button:hover {
+            background-color: #4fe8dd;
+        }
+
+        body {
+            background-image: url("/admin1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+
+
+</body>
+
+</html>

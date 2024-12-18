@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Profile</title>
+    <link rel="stylesheet" href="/css/registration.css">
+</head>  
+<script>
+        function myFunction() {
+          alert("Registration Successful....");
+        }
+    </script>
+<body>  
+  <div class="head">
+    <img id="img" src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px"> 
+    <h2>VSP HOSPITAL</h2>     
+ </div>
+<form  th:action="@{/patientlogin}" th:object="${patient}"  method="post">
+  <div class="container">  
+  <center>  <h1>Patient Register</h1> </center>  
+  <hr>  
+  <label> Firstname: </label>   
+<input type="text" th:field="*{firstname}" placeholder= "Firstname" size="15" required />   
+<label> Middlename: </label>   
+<input type="text" th:field="*{middlename}" placeholder="Middlename" size="15" required />   
+<label> Lastname: </label>    
+<input type="text" th:field="*{lastname}" placeholder="Lastname" size="15"required />
+<label>Email :</label>  
+ <input type="text" th:field="*{email}" placeholder="Email" required>      
+ <label>Password :</label>  
+ <input type="password" th:field="*{password}" placeholder="Password" required>      
+<div>  
+<label> Gender : </label><br>  
+<input type="radio" value="Male" th:field="*{gender}" checked > Male   
+<input type="radio" value="Female" th:field="*{gender}"> Female   
+<input type="radio" value="Other" th:field="*{gender}"> Other  
+  
+</div>  
+<label>Phone :</label>  
+<input name="country code"value="+91" size="2">   
+<input type="text" th:field="*{phone}" placeholder="phone no." size="10"/ required>   
+Current Address :  
+<textarea cols="80" rows="5" th:field="*{address}" placeholder="Current Address" value="address" required>  
+</textarea>  
+ 
+    <button type="submit" class="registerbtn" onclick="myFunction()">Submit</button>
+
+</form>  
+<footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>  
+</html>

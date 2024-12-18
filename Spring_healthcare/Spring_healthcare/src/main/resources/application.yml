@@ -1,0 +1,32 @@
+server:
+  port: 9091
+
+master:
+  user:
+   name: Ikram
+   email: mahammadikram777@gmail.com # 15b348d1
+  
+    
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: ikram@04J2
+    url: jdbc:mysql://localhost:3306/health
+    username: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mail:    
+    host: smtp.gmail.com
+    port: 587
+    username: 123@gmail.com
+    password: 12345@
+    properties:
+     mail:
+      smtp:
+       starttls:
+         enable: true   
+         
+  

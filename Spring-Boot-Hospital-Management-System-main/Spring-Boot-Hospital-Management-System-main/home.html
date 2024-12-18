@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+<body>
+   <div class="head">
+      <img src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px">
+      <h2>VSP Hospital</h2>
+   </div>
+   <div class="menu">
+   <ul>
+      <li><a th:href="@{/}"><i class="fas fa-home"></i>Home</a></li>
+      <li><a href="#"><i class="fas fa-user-plus"></i>Admin</a>
+          <div class="sub-menu-1">
+             <ul>
+                <li class="menu1"><a th:href="@{/adminlogin}">Login</a></li>
+             </ul>
+          </div>
+      </li>
+      <li><a href="#"><i class="fas fa-user-md"></i>Doctor</a>
+      <div class="sub-menu-1">
+         <ul>
+            <li class="menu1"><a th:href="@{/doctorlogin}">Login</a></li>
+         </ul>
+      </div>
+      <li><a href="#"><i class="fas fa-user-injured"></i>Patient</a>
+      <div class="sub-menu-1">
+         <ul>
+            <li class="menu1"><a th:href="@{/patientregistration}">Register</a></li>
+            <li class="menu1"><a th:href="@{/patientlogin}">Login</a></li>
+         </ul>
+      </div>
+      <li><a href="#"><i class="fas fa-user-nurse"></i>Pathology</a>
+      <div class="sub-menu-1">
+         <ul>
+            <li class="menu1"><a th:href="@{/pathologylogin}">Login</a></li>
+         </ul>
+      </div>
+            <li><a th:href="@{/about}"><i class="fas fa-info-circle"></i>About Us</a></li>
+            <li><a th:href="@{/contact}"><i class="fas fa-id-badge"></i>Contact</a></li>
+   </ul>
+   </div>
+   <footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>
+</html>

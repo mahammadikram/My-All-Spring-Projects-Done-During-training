@@ -1,0 +1,58 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+	<title>WELCOME</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<h3>WELCOME TO EMPLOYEE DATA PAGE </h3>
+			</div>
+
+			<div class="card-body">
+				<a th:href="@{/employee/register}" class="btn btn-warning"><< REGISTER</a>
+				<table class="table table-hover">
+					<tr class="bg-info text-white">
+						<th>ID</th>
+						<th>NAME</th>
+						<th>SAL</th>
+						<th>DEPT</th>
+						<th>GEN</th>
+						<th>ADDR</th>
+						<th>OPERATIONS</th>
+					</tr>
+					<tr th:each="ob:${list}">
+						<td>[[${ob.empId}]]</td>
+						<td>[[${ob.empName}]]</td>
+						<td>[[${ob.empSal}]]</td>
+						<td>[[${ob.empDept}]]</td>
+						<td>[[${ob.empGen}]]</td>
+						<td>[[${ob.empAddr}]]</td>
+						<td>
+							<a th:href="@{/employee/delete(id=${ob.empId})}" class="btn btn-danger">DELETE</a> |
+							<a th:href="@{/employee/edit(id=${ob.empId})}" class="btn btn-warning">EDIT</a>
+						</td>
+					</tr>
+
+				</table>
+			</div>
+			<!--Card body end-->
+	
+			<div class="card-footer bg-info text-white" th:if="${message!=null}">
+				[[${message}]]
+			</div>
+			<!--Card footer end-->
+
+		</div>
+		<!--card end-->
+	</div>
+	<!--contaner end-->
+
+</body>
+
+</html>

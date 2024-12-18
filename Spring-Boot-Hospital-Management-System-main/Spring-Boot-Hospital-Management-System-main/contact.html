@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/Contact.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+</head>
+<script>
+        function myFunction3() {
+          alert("Data Send Successfully....");
+        }
+    </script>
+<body>
+  <div class="head">
+    <img src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px">
+    <h2>VSP Hospital</h2>
+ </div>
+ <form th:action="@{/home}" th:object="${contact}">
+    <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>CONTACT</span>
+                  <span>US</span>
+                </div>
+                <div class="app-contact">CONTACT INFO : + 9898 9898</div>
+              </div>
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input class="app-form-control" type="text" th:field="*{name}" placeholder="NAME" required>
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" type="email" th:field="*{email}" placeholder="EMAIL" required>
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" type="contactno" th:field="*{contactno}" placeholder="CONTACT NO" required>
+                  </div>
+                  <div class="app-form-group message">
+                    <input class="app-form-control" type="text" th:field="*{message}" placeholder="MESSAGE" required>
+                  </div>
+                  <div class="app-form-group buttons">
+                    <input type="submit" value="CANCEL" class="app-form-button" onclick="myFunction3()">
+                    <input type="submit" value="SUBMIT" class="app-form-button">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </form>
+    <footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management Application</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Custom CSS can be added here */
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        body {
+            background-color: #e9e5db; /* Light Gray */
+        }
+        .navbar {
+            background-color: #f7f4f2; /* Blue */
+        }
+        .card {
+            border: 1px solid #055c72; /* Blue */
+        }
+        .card:hover {
+            border-color: #e4e8ec; /* Darker Blue on hover */
+            background-color: rgb(212, 175, 9);
+            color: #f3f3e8;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        #image{
+            height:250px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation Header -->
+<nav class="navbar navbar-expand-lg navbar-success bg-warning">
+    <div class="container">
+        <img src="\photos\hospital logo.jpg" height="50px" class="rounded mr-3" alt="">
+        <a class="navbar-brand " href="#">Hospital Management</a>
+        <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Developers</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid text-center">
+    <div class="row">
+      <div class="col col-md-3 col-sm-12">
+        <img src="\photos\doctor1.jpeg " alt="">
+      </div>
+      <div class="col col-md-6 col-sm-12">
+        <h1>Welcome to SKS Hospital Management System</h1>
+        <p>This is a simple hospital management application.</p>
+      </div>
+      <div class="col col-md-3 col-sm-12">
+        <img src="\photos\doctor2.jpeg " alt="">
+      </div>
+    </div>
+</div>
+<!-- <div class="container mt-4">
+    <div class="row">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col sm-12">
+                <img src="\photos\doctor1.jpeg " alt="">
+              </div>
+              <div class="col-6 sm-12">
+                <h1>Welcome to SKS Hospital Management System</h1>
+                <p>This is a simple hospital management application.</p>
+              </div>
+              <div class="col sm-12">
+                <img src="\photos\doctor2.jpeg " alt="">
+              </div>
+            </div>
+
+          </div>
+        <div class="col-md-6">
+            <!-- You can add content for the right side here if needed -->
+        </div>
+    </div>
+</div> -->
+<!-- Main Content Area -->
+<div class="container mt-4 mb-5">
+    <div class="row">
+       
+        <div class="col-md-4 mb-4">
+        <a href="index.htm">
+            <div class="card">
+                <div>
+                    <img src="\photos\ourdevlopers.png " class="h-80 w-100" alt="" id="image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Admin Register</h5>
+                    <p class="card-text">This is a simple card.</p>
+                </div>
+               
+            </div>
+         </a>
+        </div>
+        <div class="col-md-4 mb-4 ">
+            <a href="#" class="no-text-decoration">
+            <div class="card">
+                <img src="\photos\doctors.avif" class="h-80 w-100" alt="" id="image">
+                <div class="card-body">
+                    <h5 class="card-title">Doctor DashBoard</h5>
+                    <p class="card-text">This is another simple card.</p>
+                </div>
+            </div>
+         </a>
+        </div>
+            <div class="col-md-4 mb-4">
+            <a href="#">
+                <div class="card">
+                    <img src="\photos\th r.jpeg"  alt="" id="image">
+                    <div class="card-body">
+                        <h5 class="card-title">Reciptionist DashBoard</h5>
+                        <p class="card-text">This is yet another simple card.</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <a href="">
+            <div class="card h-200 w-150">
+                <div class="card-body">
+                    <img src="\photos\nurses.webp" alt="" id="image">
+                    <h5 class="card-title">Nurse LogIn Board</h5>
+                    <p class="card-text">This is a simple card.</p>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-md-4 mb-4">
+            <a href="">
+            <div class="card h-200 w-150">
+               
+                <div class="card-body">
+                    <img src="\photos\th.jpeg"  alt="" id="image">
+                    <h5 class="card-title">Patient DashBoard</h5>
+                    <p class="card-text">This is another simple card.</p>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-md-4 mb-4">
+        <a href="">
+            <div class="card  h-200 w-150">
+                <img src="\photos\laboratory-flooring.jpg"   alt="" id="image">
+                <div class="card-body">
+                    <h5 class="card-title">Laboratory Dashboard</h5>
+                    <p class="card-text">This is yet another simple card.</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <span>&copy; 2024 Hospital Management Application</span>
+    </div>
+</footer>
+
+<!-- Bootstrap JS, jQuery, and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

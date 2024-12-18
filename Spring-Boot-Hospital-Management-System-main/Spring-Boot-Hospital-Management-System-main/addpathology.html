@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Profile</title>
+    <link rel="stylesheet" href="/css/addpathology.css">
+</head>
+<body>
+ <div class="head">
+      <img src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px">
+      <h2>VSP Hospital</h2>
+   </div>
+    <div class="container">
+            <center><h1>Add Profile</h1></center>
+            <form th:action="@{/viewpathology}" id="register" th:object="${pathologyadd}" method="post">
+            
+                <label for="first-name">Full Name:</label>
+                <input type="text" id="register" th:field="*{name}" placeholder="Enter Name" size="15" required>
+                
+                <label for="last-name">Designation:</label>
+                <input type="text" id="register" th:field="*{designation}" placeholder="Enter Designation:" size="15" required>
+                
+                <label for="id">Phone:</label>
+                <input type="text" id="register" th:field="*{phone}" placeholder="Enter Phone" size="10" required>
+                
+                <label for="email">Email:</label>
+                <input type="text" id="register" th:field="*{email}" placeholder="Enter Your Valid Email" required>
+                
+                <label>Gender :</label><br>  
+                <input type="radio" value="Male" th:field="*{gender}" checked > Male   
+                <input type="radio" value="Female" th:field="*{gender}"> Female   
+                <input type="radio" value="Other" th:field="*{gender}"> Other 
+                <br><br> 
+                <button type="submit" class="deletebtn">Add</button>
+                <button type="reset" class="cancelbtn">RESET</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>
+</html>

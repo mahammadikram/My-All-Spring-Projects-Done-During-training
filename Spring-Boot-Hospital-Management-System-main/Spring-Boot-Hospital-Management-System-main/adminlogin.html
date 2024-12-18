@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatibale" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.8">
+        <link rel="stylesheet" href="/css/adminlogin.css">
+        <title>Admin Home</title>
+    </head>
+    <body>
+      <div class="head"> <img src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px">
+        <h2>VSP Hospital</h2>   
+      </div>
+      
+      <div class="login-page">
+            <div class="form">
+              <div class="login">
+                <div class="login-header">
+                  <h3> ADMIN LOGIN</h3>
+                  <p>Please enter your credentials to login.</p>
+                </div> 
+              </div>
+              <form onsubmit="return validate()" class="login-form" th:action="@{/adminhome}">
+                <input type="text" placeholder="Enter Username" required/>
+                <input type="password" placeholder="Enter Password" required/>
+                <button>login</button>
+              </form>
+            </div>
+          </div>
+          <footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>
+</html>

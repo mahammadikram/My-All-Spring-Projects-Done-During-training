@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatibale" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.8">
+        <link rel="stylesheet" href="/css/viewdoctor.css">
+        <title>Test List</title>
+    </head>
+    <body>
+	   <div class="head"> <img src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px">
+        <h2>VSP Hospital</h2>   
+      </div>
+         <form>
+            <table>
+            <tr><h1><center><u>Test LIST</u></center></h1></tr>	
+            <tr class="row">
+                <th height=30px>ID</th>
+				<th>Name</th>
+				<th>Contact</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Appointment</th>
+                <th>Time</th>
+            </tr>
+            <tr th:each="TestAppointment:${testapp}" bgcolor="skyblue">
+                <td th:text="${TestAppointment.id}"><input type="text" name="id" required></td>
+                <td th:text="${TestAppointment.name}"><input type="text" name="name" required></td>
+                <td th:text="${TestAppointment.contact}"><input type="text" name="contact" size="10" required></td>
+                <td th:text="${TestAppointment.age}"><input type="text" name="age"  required></td>
+                <td th:text="${TestAppointment.gender}"><input type="text" name="gender" required></td>
+                <td th:text="${TestAppointment.appointment}"><input type="text" name="appointment" required></td>
+                <td th:text="${TestAppointment.time}"><input type="text" name="time" required></td>
+            </tr>
+        </table>
+        </form> 
+        <footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>
+</html>

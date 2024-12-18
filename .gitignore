@@ -1,0 +1,48 @@
+# Compiled class files
+*.class
+*.jar
+*.war
+*.ear
+
+# Build output directories
+/target/
+/build/
+
+# IDE specific files
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+*.log.*
+
+# Database files
+*.db
+*.h2.db
+
+# Generated files
+*.bak
+*.swp
+*.swo
+
+# Local configuration
+.env
+.local
+
+# Dependency directories
+/node_modules/
+/bower_components/
+
+# Miscellaneous files
+*.tmp
+*.bak

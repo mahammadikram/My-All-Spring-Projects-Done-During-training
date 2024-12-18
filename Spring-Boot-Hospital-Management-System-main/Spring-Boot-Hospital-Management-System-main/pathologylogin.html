@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatibale" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.8">
+        <link rel="stylesheet" href="/css/pathologylogin.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <title>Pathology Login</title>
+    </head>
+    <body>
+      <div class="head"> <img src="/image/HospitalLogo.png" alt="logo.jpg" height="75px" width="75px">
+        <h2>VSP Hospital</h2>   
+      </div>
+          <div class="login-page">
+            <div class="form">
+              <div class="login">
+                <div class="login-header">
+                  <h3>PATHOLOGY LOGIN</h3>
+                </div>
+                
+              </div>
+              <form  class="login-form" th:action="@{/pathologyhome}">
+                <i class="fas fa-user"></i>
+                <input type="text"  placeholder="   username" required>
+                <i class="fas fa-key"></i>
+                <input type="password" placeholder="   password"  required/>
+                <button>login</button>
+              </form>
+            </div>
+          </div>
+          <footer>
+      <p>&copy; Copyright</p>
+    </footer>
+</body>
+</html>

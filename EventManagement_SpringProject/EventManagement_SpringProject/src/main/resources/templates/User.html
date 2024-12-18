@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Users..Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+</head>
+
+<body>
+    <header id="menu-jk">
+
+        <div id="nav-head" class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3  col-sm-12"
+                        style="color:#000;font-weight:bold; font-size:42px; margin-top: 1% !important;">Happy</div>
+                    <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                        <ul>
+                            <li>
+                                <h2> Only
+                                    <!-- <img src="slogo.jpg" alt="User Image" style="width: 20px; height: 20px; margin-right: 5px;"> -->
+                                    <span style="color: #00ab9f;">&#160; Admin &#160;</span>can access and Update this..
+                                </h2>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-sm-2 d-none d-lg-block appoint">
+
+                        <a class="btn btn-success" href="/EventManagement/logout">Logout</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <section class="options">
+        <a href="users" class="book-button">Users</a>
+        <a href="allBookings" class="book-button">Bookings</a>
+    </section>
+    <section>
+        <center>
+            <br>
+            <font color="#00ab9f" size="4">
+                <h1> Users </h1>
+            </font>
+            <h1 class="errmsg"> </h1>
+
+            <div class="container ">
+                [[${message}]]
+                <div class="jumbotron">
+                    <input class="form-control" id="search" type="text" placeholder="Search..">
+                    <table class="table">
+                        <thead>
+                            <tr style="background-color: lightblue;">
+                                <br>
+                                <th></th>
+                                <!-- <th>Slno</th> -->
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+
+                                <th>Delete</th>
+                            </tr>
+                            <tr th:each="ob:${list}">
+                                <td></td>
+                                <!-- <td>[[${ob.userId}]]</td> -->
+                                <td>[[${ob.userName}]]</td>
+                                <td>[[${ob.userEmail}]]</td>
+                                <td>[[${ob.userPhone}]]</td>
+                                <td><a class="btn btn-danger" th:href="@{delete(id=${ob.userId})}">DELETE</a></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </center>
+
+        <script>
+            $(document).ready(function () {
+                $("#search").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    //alert(value);
+                    $("#table tr").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > 0)
+                        //alert(this);
+                    });
+                });
+            });
+        </script>
+    </section>
+</body>
+<style>
+    .options {
+
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .book-button {
+        display: block;
+        width: 100px;
+        padding: 7px;
+        background-color: #00ab9f;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .book-button:hover {
+        background-color: #4fe8dd;
+    }
+</style>
+
+</html>

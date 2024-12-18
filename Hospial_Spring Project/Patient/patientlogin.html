@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-image: url(/photos/laboratory-flooring.jpg);
+        }
+        .rounded{
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-success bg-secondary mb-5 ">
+        <div class="container">
+            <img src="\photos\hospital logo.jpg" height="50px" class="rounded" alt="">
+            <a class="navbar-brand " href="#">Hospital Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LogIn here</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about Developers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card bg-secondary" style="width: 22rem;">
+        <div class="card-body">
+            <h5 class="card-title text-center">Login From </h5>
+            <form>
+                <div class="mb-3">
+                    <label for="appointmentStatus">User Role</label>
+                    <select class="form-control" id="appointmentStatus">
+                      <option value="doctor">Doctor</option>
+                      <option value="admin">Admin</option>
+                      <option value="reciption">Reciptionist</option>
+                      <option value="patient">Patient</option>
+                    </select>
+                  </div>
+                <div class="mb-3">
+                    <label for="patientId" class="form-label">User ID</label>
+                    <input type="text" class="form-control" id="patientId" placeholder="Enter User ID" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mobileNumber" class="form-label">Mobile Number</label>
+                    <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter Mobile Number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
